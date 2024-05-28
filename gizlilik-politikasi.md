@@ -1,7 +1,7 @@
 Gizlilik Politikası
 Son güncelleme: 28/05/2024
 
-"Tarih Gezgini" uygulaması, Enes Sirkecioğlu tarafından geliştirilmiştir. Bu gizlilik politikası, "Historical Wanderer" uygulamasının kullanımı sırasında topladığımız bilgiler ve bu bilgilerin nasıl kullanıldığı hakkında bilgi vermektedir.
+"Tarih Gezgini" uygulaması, Enes Sirkecioğlu tarafından geliştirilmiştir. Bu gizlilik politikası, "Tarih Gezgini" uygulamasının kullanımı sırasında topladığımız bilgiler ve bu bilgilerin nasıl kullanıldığı hakkında bilgi vermektedir.
 
 Bilgi Toplama ve Kullanım
 Uygulamayı kullanımınız sırasında, uygulamanın işlevselliğini iyileştirmek, kullanıcı deneyimini kişiselleştirmek ve reklam gösterimi yapmak amacıyla aşağıdaki verileri toplamaktayız:
