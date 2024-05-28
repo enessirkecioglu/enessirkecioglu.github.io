@@ -4,6 +4,8 @@ At Historical Wanderer, we are serious about protecting the privacy of our users
 
 ## Information Collected
 
+- User Name
+- Email Address
 - Geographic Location
 
 ## Use of Information
