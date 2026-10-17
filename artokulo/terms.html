@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artokulo - Kullanım Koşulları / Terms of Service</title>
+    <title>Artokulo - Kullanım Koşulları / Terms of Service / Ketentuan Layanan</title>
     <style>
         :root {
             --bg-color: #0b0f17;
@@ -41,8 +41,33 @@
             max-width: 760px;
             margin: 0 auto;
         }
+        .lang-switcher {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+            background: var(--surface-color);
+            padding: 6px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            width: fit-content;
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .lang-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+        }
         header {
-            margin-bottom: 32px;
+            margin-bottom: 28px;
             padding-bottom: 20px;
             border-bottom: 1px solid var(--border-color);
         }
@@ -75,24 +100,21 @@
             border-left: 4px solid var(--primary);
             border-radius: 12px;
             padding: 16px 20px;
-            margin-bottom: 28px;
-            font-size: 15px;
+            margin-bottom: 24px;
+            font-size: 14px;
         }
         section {
             background: var(--surface-color);
             border: 1px solid var(--border-color);
             border-radius: 14px;
             padding: 20px 24px;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
         h2 {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 700;
             color: var(--primary);
             margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
         p {
             font-size: 14px;
@@ -107,11 +129,13 @@
             font-size: 14px;
         }
         li { margin-bottom: 6px; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
         footer {
             text-align: center;
             font-size: 12px;
             color: var(--text-muted);
-            margin-top: 40px;
+            margin-top: 36px;
             padding-top: 20px;
             border-top: 1px solid var(--border-color);
         }
@@ -119,49 +143,181 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <span class="badge">Artokulo Legal</span>
-            <h1>Kullanım Koşulları</h1>
-            <p class="date">Son Güncelleme: 17 Ekim 2026 • Versiyon 1.0.0</p>
-        </header>
-
-        <div class="summary-card">
-            <strong>Kullanım Taahhüdü:</strong> Artokulo uygulamasını indirerek ve kullanarak bu sözleşmede belirtilen tüm koşulları kabul etmiş sayılırsınız. Uygulama kişisel bütçe ve harcama takibi amacı taşır.
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+            <button class="lang-btn" onclick="setLanguage('tr')" id="btn-tr">🇹🇷 Türkçe</button>
+            <button class="lang-btn" onclick="setLanguage('en')" id="btn-en">🇬🇧 English</button>
+            <button class="lang-btn" onclick="setLanguage('id')" id="btn-id">🇮🇩 Indonesia</button>
         </div>
 
-        <section>
-            <h2>1. Hizmetin Kapsamı ve Amacı</h2>
-            <p>Artokulo, fiş görseli ayrıştırma, bütçe takibi, fiyat artışı ve küçülme (shrinkflation) analitiği sunan bir kişisel finans yardımcı aracıdır. Resmi muhasebe, vergi danışmanlığı veya lisanslı finansal yatırım tavsiyesi sunmaz.</p>
-        </section>
+        <!-- ================= TURKISH CONTENT ================= -->
+        <div class="lang-content" id="content-tr">
+            <header>
+                <span class="badge">Artokulo Yasal</span>
+                <h1>Kullanım Koşulları</h1>
+                <p class="date">Son Güncelleme: 17 Ekim 2026 • Sürüm 1.0.0</p>
+            </header>
 
-        <section>
-            <h2>2. OCR ve Yapay Zekâ Doğruluğu</h2>
-            <p>Optik karakter tanıma ve yapay zekâ ayrıştırma algoritmaları yüksek doğrulukla çalışmakla birlikte termal fiş yıpranmaları, düşük aydınlatma ve karmaşık el yazıları nedeniyle nadiren hatalı okuma yapabilir. Kullanıcılar kaydedilen harcama kalemlerini onaylamadan önce inceleme ekranında kontrol etmekle yükümlüdür.</p>
-        </section>
+            <div class="summary-card">
+                <strong>Kullanım Şartları Özeti:</strong> Artokulo uygulamasını indirerek bu sözleşmedeki şartları kabul etmiş olursunuz. Artokulo, kişisel finans ve bütçe yönetimi sağlayan bir yardımcı araçtır; resmi muhasebe, vergi danışmanlığı veya yatırım tavsiyesi sunmaz.
+            </div>
 
-        <section>
-            <h2>3. Abonelikler ve Ücretlendirme (Pro Plan)</h2>
-            <p>Standart kullanıcılar aylık sınırlı fiş tarama hakkına sahiptir. Sınırsız tarama ve gelişmiş enflasyon analizleri için Artokulo Pro aboneliği sunulur. Abonelik ödemeleri Apple App Store hesabınız üzerinden tahsil edilir ve satın alma onayınızla başlar.</p>
-        </section>
+            <section>
+                <h2>1. Hizmetin Kapsamı</h2>
+                <p>Artokulo; fiş görseli ayrıştırma, harcama gruplama, aylık bütçe kotası ve ürün bazlı fiyat sapması (shrinkflation / gizli zam) analitiği sağlar. Uygulama kişisel bütçe farkındalığı oluşturmak amacıyla geliştirilmiştir.</p>
+            </section>
 
-        <section>
-            <h2>4. Fikri Mülkiyet Hakları</h2>
-            <p>Artokulo uygulamasına ait logo, tasarım, kodlar, yapay zekâ optimizasyon algoritmaları ve tüm materyaller telif hakkı ile korunmaktadır. Kopyalanamaz veya tersine mühendislik uygulanamaz.</p>
-        </section>
+            <section>
+                <h2>2. Yapay Zekâ Doğruluğu ve Kullanıcı Sorumluluğu</h2>
+                <p>Uygulama, fiş üzerindeki harcama kalemlerini çok modlu yapay zekâ görme modelleri ile çözümler. Buruşuk, silik veya kötü aydınlatılmış fişlerde nadiren de olsa hatalı okuma yapılabilir. Kullanıcılar, fiş tarandıktan sonra açılan inceleme ekranında harcama tutarlarını ve ürünleri doğrulamakla sorumludur.</p>
+            </section>
 
-        <section>
-            <h2>5. Sorumluluğun Sınırlandırılması</h2>
-            <p>Artokulo, uygulamanın kullanımından veya kullanılamamasından doğabilecek dolaylı veya dolaysız maddi kayıplardan sorumlu tutulamaz. Uygulama "olduğu gibi" (as-is) sunulmaktadır.</p>
-        </section>
+            <section>
+                <h2>3. Abonelik ve Ücretlendirme (Artokulo Pro)</h2>
+                <p>Standart kullanıcılar aylık 10 adet ücretsiz fiş tarama hakkına sahiptir. Sınırsız fiş taraması ve derinlemesine enflasyon geçmişi analizleri için Artokulo Pro aboneliği sunulur. Abonelik ödemeleri kullanıcının Apple Kimliği / App Store hesabı üzerinden yürütülür.</p>
+            </section>
 
-        <section>
-            <h2>6. Değişiklikler ve Yürürlük</h2>
-            <p>Kullanım koşulları zaman zaman güncellenebilir. Güncel metin her zaman bu bağlantı üzerinden ve uygulama içinden görüntülenebilir.</p>
-        </section>
+            <section>
+                <h2>4. Fikri Mülkiyet Hakları</h2>
+                <p>Artokulo logosu, kullanıcı arayüzü tasarımı, algoritmaları ve tüm materyalleri telif hakkı ile korunmaktadır. Kopyalanamaz, çoğaltılamaz veya tersine mühendisliğe tabi tutulamaz.</p>
+            </section>
+
+            <section>
+                <h2>5. Sorumluluğun Sınırlandırılması</h2>
+                <p>Artokulo, uygulamanın kullanımından kaynaklanabilecek doğrudan veya dolaylı maddi veya manevi kayıplardan sorumlu tutulamaz. Yazılım "olduğu gibi" (as-is) sunulur.</p>
+            </section>
+
+            <section>
+                <h2>6. Değişiklikler ve İletişim</h2>
+                <p>Kullanım koşulları zaman zaman güncellenebilir. Herhangi bir sorunuz için:</p>
+                <p><strong>E-posta:</strong> support@artokulo.com</p>
+            </section>
+        </div>
+
+        <!-- ================= ENGLISH CONTENT ================= -->
+        <div class="lang-content" id="content-en">
+            <header>
+                <span class="badge">Artokulo Legal</span>
+                <h1>Terms of Service</h1>
+                <p class="date">Last Updated: October 17, 2026 • Version 1.0.0</p>
+            </header>
+
+            <div class="summary-card">
+                <strong>Terms Summary:</strong> By downloading and using Artokulo, you agree to these Terms. Artokulo is an intelligent personal expense and budget assistant; it does not provide certified accounting, tax audit, or licensed investment advice.
+            </div>
+
+            <section>
+                <h2>1. Scope of Service</h2>
+                <p>Artokulo provides automated receipt line-item parsing, monthly budget management, and personal basket price drift (shrinkflation / price hike) detection. The service is strictly intended for personal financial awareness.</p>
+            </section>
+
+            <section>
+                <h2>2. AI Vision Accuracy &amp; Verification</h2>
+                <p>Receipt data extraction is powered by multimodal artificial intelligence vision models. Due to thermal paper fading, folds, or low lighting, occasional misreadings can occur. Users are responsible for inspecting and verifying all amounts and items on the review screen before finalizing a transaction.</p>
+            </section>
+
+            <section>
+                <h2>3. Subscriptions &amp; Purchases (Artokulo Pro)</h2>
+                <p>Standard users receive a monthly allowance of 10 free receipt scans. Artokulo Pro unlocks unlimited scanning, data exports, and multi-year inflation analytics. Payments are processed securely via Apple In-App Purchase through your Apple ID.</p>
+            </section>
+
+            <section>
+                <h2>4. Intellectual Property</h2>
+                <p>The Artokulo application, logos, UI designs, algorithms, and source code are protected by intellectual property laws. Reverse engineering, redistribution, or unauthorized duplication is strictly prohibited.</p>
+            </section>
+
+            <section>
+                <h2>5. Limitation of Liability</h2>
+                <p>Artokulo is provided on an "as-is" and "as-available" basis without warranties of any kind. Artokulo shall not be liable for any direct, indirect, or incidental financial discrepancies.</p>
+            </section>
+
+            <section>
+                <h2>6. Changes &amp; Contact</h2>
+                <p>These terms may be revised periodically. For inquiries:</p>
+                <p><strong>Email:</strong> support@artokulo.com</p>
+            </section>
+        </div>
+
+        <!-- ================= INDONESIAN CONTENT ================= -->
+        <div class="lang-content" id="content-id">
+            <header>
+                <span class="badge">Legal Artokulo</span>
+                <h1>Ketentuan Layanan</h1>
+                <p class="date">Terakhir Diperbarui: 17 Oktober 2026 • Versi 1.0.0</p>
+            </header>
+
+            <div class="summary-card">
+                <strong>Ringkasan Ketentuan:</strong> Dengan mengunduh dan menggunakan Artokulo, Anda menyetujui ketentuan ini. Artokulo adalah asisten pengeluaran pribadi cerdas; aplikasi ini bukan layanan akuntansi resmi, penasihat pajak, atau konsultan keuangan berlisensi.
+            </div>
+
+            <section>
+                <h2>1. Cakupan Layanan</h2>
+                <p>Artokulo menyediakan pemindaian struk berbasis item, pemantauan batas anggaran bulanan, dan deteksi lonjakan harga serta pengecilan kemasan (shrinkflation). Layanan ini ditujukan murni untuk pengelolaan keuangan pribadi.</p>
+            </section>
+
+            <section>
+                <h2>2. Akurasi Vision AI &amp; Tanggung Jawab Pengguna</h2>
+                <p>Pengekstrakan data struk dilakukan menggunakan model kecerdasan buatan visual mutakhir (Multimodal Vision AI). Kertas struk yang buram atau pencahayaan minim dapat memengaruhi hasil. Pengguna bertanggung jawab untuk memeriksa dan memastikan nominal pada layar peninjauan sebelum menyimpan transaksi.</p>
+            </section>
+
+            <section>
+                <h2>3. Langganan &amp; Paket Pro</h2>
+                <p>Pengguna standar mendapatkan 10 kali pemindaian struk gratis setiap bulan. Paket Artokulo Pro menawarkan pemindaian tak terbatas dan analisis inflasi mendalam. Pembayaran diproses dengan aman melalui Apple In-App Purchase.</p>
+            </section>
+
+            <section>
+                <h2>4. Hak Kekayaan Intelektual</h2>
+                <p>Seluruh desain antarmuka, logo, algoritma, dan materi aplikasi Artokulo dilindungi oleh undang-undang hak cipta. Dilarang keras melakukan rekayasa balik atau menyalin materi tanpa izin tertulis.</p>
+            </section>
+
+            <section>
+                <h2>5. Batasan Tanggung Jawab</h2>
+                <p>Aplikasi ini disediakan "sebagaimana adanya". Artokulo tidak bertanggung jawab atas kerugian finansial langsung maupun tidak langsung yang timbul dari penggunaan aplikasi.</p>
+            </section>
+
+            <section>
+                <h2>6. Kontak Kami</h2>
+                <p>Untuk pertanyaan terkait ketentuan layanan ini:</p>
+                <p><strong>Email:</strong> support@artokulo.com</p>
+            </section>
+        </div>
 
         <footer>
-            &copy; 2026 Artokulo Inc. Tüm hakları saklıdır.
+            &copy; 2026 Artokulo Inc. All rights reserved.
         </footer>
     </div>
+
+    <script>
+        function setLanguage(lang) {
+            var validLangs = ['tr', 'en', 'id'];
+            if (!validLangs.includes(lang)) { lang = 'en'; }
+            
+            document.querySelectorAll('.lang-content').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            document.querySelectorAll('.lang-btn').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            
+            var targetContent = document.getElementById('content-' + lang);
+            var targetBtn = document.getElementById('btn-' + lang);
+            if (targetContent) targetContent.classList.add('active');
+            if (targetBtn) targetBtn.classList.add('active');
+            
+            try {
+                var url = new URL(window.location);
+                url.searchParams.set('lang', lang);
+                window.history.replaceState({}, '', url);
+            } catch(e) {}
+        }
+        
+        var params = new URLSearchParams(window.location.search);
+        var initialLang = params.get('lang');
+        if (!initialLang) {
+            var browserLang = (navigator.language || 'en').substring(0, 2).toLowerCase();
+            initialLang = (browserLang === 'tr' || browserLang === 'id') ? browserLang : 'en';
+        }
+        setLanguage(initialLang);
+    </script>
 </body>
 </html>

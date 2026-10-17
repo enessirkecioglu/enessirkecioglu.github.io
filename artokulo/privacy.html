@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artokulo - Gizlilik Politikası / Privacy Policy</title>
+    <title>Artokulo - Gizlilik Politikası / Privacy Policy / Kebijakan Privasi</title>
     <style>
         :root {
             --bg-color: #0b0f17;
@@ -41,8 +41,33 @@
             max-width: 760px;
             margin: 0 auto;
         }
+        .lang-switcher {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+            background: var(--surface-color);
+            padding: 6px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            width: fit-content;
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .lang-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+        }
         header {
-            margin-bottom: 32px;
+            margin-bottom: 28px;
             padding-bottom: 20px;
             border-bottom: 1px solid var(--border-color);
         }
@@ -75,24 +100,21 @@
             border-left: 4px solid var(--primary);
             border-radius: 12px;
             padding: 16px 20px;
-            margin-bottom: 28px;
-            font-size: 15px;
+            margin-bottom: 24px;
+            font-size: 14px;
         }
         section {
             background: var(--surface-color);
             border: 1px solid var(--border-color);
             border-radius: 14px;
             padding: 20px 24px;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
         h2 {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 700;
             color: var(--primary);
             margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
         p {
             font-size: 14px;
@@ -107,11 +129,13 @@
             font-size: 14px;
         }
         li { margin-bottom: 6px; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
         footer {
             text-align: center;
             font-size: 12px;
             color: var(--text-muted);
-            margin-top: 40px;
+            margin-top: 36px;
             padding-top: 20px;
             border-top: 1px solid var(--border-color);
         }
@@ -119,55 +143,197 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <span class="badge">Artokulo Legal</span>
-            <h1>Gizlilik Politikası</h1>
-            <p class="date">Son Güncelleme: 17 Ekim 2026 • Versiyon 1.0.0</p>
-        </header>
-
-        <div class="summary-card">
-            <strong>Özet Taahhüdümüz:</strong> Artokulo, gizliliğinizi en üst düzeyde korumayı ilke edinir. Fiş ve harcama verileriniz cihazınızda yerel olarak saklanır. Kişisel verileriniz hiçbir üçüncü taraf reklam veya veri simsarlığı şirketine satılmaz.
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+            <button class="lang-btn" onclick="setLanguage('tr')" id="btn-tr">🇹🇷 Türkçe</button>
+            <button class="lang-btn" onclick="setLanguage('en')" id="btn-en">🇬🇧 English</button>
+            <button class="lang-btn" onclick="setLanguage('id')" id="btn-id">🇮🇩 Indonesia</button>
         </div>
 
-        <section>
-            <h2>1. Toplanan Veriler ve Kullanım Amacı</h2>
-            <p>Artokulo uygulaması yalnızca finansal harcama ve bütçe yönetimi işlevlerini sunabilmek amacıyla aşağıdaki verileri işler:</p>
-            <ul>
-                <li><strong>Fiş ve Fatura Görselleri:</strong> Kamera veya fotoğraf galerisinden seçtiğiniz fişler, satır bazlı ürün ve fiyat ayrıştırması yapmak amacıyla işlenir.</li>
-                <li><strong>Harcama Kayıtları:</strong> Mağaza adı, tarih, para birimi, kategori ve sepet ürünleri cihazınızın yerel depolama alanında tutulur.</li>
-                <li><strong>Kullanıcı Tercihleri:</strong> Para birimi, dil tercihi ve aylık bütçe limitiniz.</li>
-            </ul>
-        </section>
+        <!-- ================= TURKISH CONTENT ================= -->
+        <div class="lang-content" id="content-tr">
+            <header>
+                <span class="badge">Artokulo Yasal</span>
+                <h1>Gizlilik Politikası</h1>
+                <p class="date">Son Güncelleme: 17 Ekim 2026 • Sürüm 1.0.0</p>
+            </header>
 
-        <section>
-            <h2>2. Kamera ve Fotoğraf İzinleri</h2>
-            <p>Uygulama, yalnızca sizin onayınızla ve fiş tarama butonuna bastığınızda kamera ve fotoğraf kitaplığına erişir. Bu izinler arka planda gizlice fotoğraf çekmek veya galerinizdeki diğer fotoğrafları taramak için asla kullanılmaz.</p>
-        </section>
+            <div class="summary-card">
+                <strong>Gizlilik İlkemiz:</strong> Artokulo, gizliliğinizi en üst düzeyde korumayı taahhüt eder. Harcama ve fiş verileriniz cihazınızda yerel olarak saklanır. Kişisel verileriniz hiçbir üçüncü tarafa veya reklam şirketine satılmaz.
+            </div>
 
-        <section>
-            <h2>3. Yapay Zekâ (AI) ve Görüntü İşleme</h2>
-            <p>Fiş ayrıştırma işlemi yapay zekâ görme modelleri (Google Gemini / OpenAI Vision) aracılığıyla yürütülür. Fiş görseli analiz için şifreli (HTTPS/TLS) bağlantı üzerinden doğrudan ilgili yapay zekâ sağlayıcısına iletilir ve yalnızca JSON yanıtı üretmek amacıyla kullanılır. Verileriniz yapay zekâ modellerinin genel eğitimi için paylaşılmaz.</p>
-        </section>
+            <section>
+                <h2>1. Toplanan Veriler ve Kullanım Amacı</h2>
+                <p>Artokulo uygulaması yalnızca kişisel bütçe ve harcama yönetimi işlevlerini sunmak amacıyla aşağıdaki verileri işler:</p>
+                <ul>
+                    <li><strong>Fiş Görselleri:</strong> Kamera veya fotoğraf galerisinden seçtiğiniz fişler, satır bazlı ürün ve harcama kalemlerini ayrıştırmak amacıyla işlenir.</li>
+                    <li><strong>Harcama Kayıtları:</strong> Mağaza adı, tarih, para birimi, kategori ve sepet ürünleri cihazınızın güvenli yerel depolama alanında tutulur.</li>
+                    <li><strong>Kullanıcı Tercihleri:</strong> Para birimi, dil tercihi ve aylık bütçe limitiniz.</li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>4. Veri Saklama ve Güvenlik</h2>
-            <p>Tüm harcama geçmişiniz cihazınızın güvenli depolama alanında (Sandbox) saklanır. Harici API anahtarlarınız Apple iOS Keychain üzerinde donanımsal düzeyde şifrelenerek korunur.</p>
-        </section>
+            <section>
+                <h2>2. Kamera ve Fotoğraf İzinleri</h2>
+                <p>Uygulama, yalnızca sizin onayınızla ve fiş tarama butonuna bastığınızda kamera ve fotoğraf kitaplığına erişir. Bu izinler arka planda gizlice fotoğraf çekmek veya galerinizdeki diğer fotoğrafları taramak için asla kullanılmaz.</p>
+            </section>
 
-        <section>
-            <h2>5. Veri Silme ve Kullanıcı Hakları</h2>
-            <p>Dilediğiniz zaman uygulama içindeki <em>Profil &gt; Verileri ve Önbelleği Sıfırla</em> seçeneğini kullanarak tüm harcama geçmişinizi kalıcı olarak silebilirsiniz. Uygulama silindiğinde cihazda kayıtlı tüm yerel veriler otomatik olarak imha edilir.</p>
-        </section>
+            <section>
+                <h2>3. Çok Modlu Yapay Zekâ (Multimodal Vision AI)</h2>
+                <p>Uygulamada yerel OCR tarayıcı kullanılmamaktadır. Fiş analizleri, doğrudan çok modlu yapay zekâ görme modelleri (Google Gemini / OpenAI Vision) aracılığıyla şifreli HTTPS bağlantısı üzerinden gerçekleştirilir. Fiş görseli yalnızca JSON verisi üretmek amacıyla tek seferlik işlenir ve yapay zekâ modellerinin genel eğitimi için saklanmaz.</p>
+            </section>
 
-        <section>
-            <h2>6. İletişim</h2>
-            <p>Gizlilik politikamız ile ilgili soru ve talepleriniz için bize ulaşabilirsiniz:</p>
-            <p><strong>E-posta:</strong> support@artokulo.com</p>
-        </section>
+            <section>
+                <h2>4. Veri Saklama ve Güvenlik</h2>
+                <p>Tüm harcama geçmişiniz cihazınızın güvenli koruma alanında (App Sandbox) saklanır. Harici API anahtarlarınız Apple iOS Keychain üzerinde donanımsal düzeyde şifrelenerek korunur.</p>
+            </section>
+
+            <section>
+                <h2>5. Veri Silme ve Kullanıcı Hakları</h2>
+                <p>Dilediğiniz zaman uygulama içindeki <em>Profil &gt; Verileri ve Önbelleği Sıfırla</em> seçeneğini kullanarak tüm harcama geçmişinizi kalıcı olarak silebilirsiniz. Uygulama cihazdan kaldırıldığında tüm yerel veriler otomatik olarak imha edilir.</p>
+            </section>
+
+            <section>
+                <h2>6. İletişim</h2>
+                <p>Gizlilik politikamız ile ilgili her türlü soru için:</p>
+                <p><strong>E-posta:</strong> support@artokulo.com</p>
+            </section>
+        </div>
+
+        <!-- ================= ENGLISH CONTENT ================= -->
+        <div class="lang-content" id="content-en">
+            <header>
+                <span class="badge">Artokulo Legal</span>
+                <h1>Privacy Policy</h1>
+                <p class="date">Last Updated: October 17, 2026 • Version 1.0.0</p>
+            </header>
+
+            <div class="summary-card">
+                <strong>Privacy Commitment:</strong> Artokulo is built with a privacy-first architecture. Your receipt and expense records are stored locally on your device. We do not sell or monetize your personal financial data to third-party advertisers.
+            </div>
+
+            <section>
+                <h2>1. Information Collected and Purpose</h2>
+                <p>Artokulo processes only the minimum data required to deliver expense tracking and budget intelligence:</p>
+                <ul>
+                    <li><strong>Receipt Images:</strong> Images captured via camera or selected from photo library are processed to extract merchant, date, and line-item details.</li>
+                    <li><strong>Expense Records:</strong> Store names, dates, amounts, categories, and itemized lines stored locally on your device.</li>
+                    <li><strong>User Preferences:</strong> Default currency, language, and monthly budget limits.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>2. Camera and Photo Library Access</h2>
+                <p>Camera and photo permissions are requested solely when you trigger receipt scanning. The app never captures background photos or scans unauthorized images from your photo library.</p>
+            </section>
+
+            <section>
+                <h2>3. Multimodal Vision AI Processing</h2>
+                <p>Artokulo does not use local OCR software. Receipt parsing is powered by secure multimodal vision AI models (Google Gemini / OpenAI Vision) over encrypted HTTPS. Images are processed ephemerally to produce JSON expense data and are not retained to train public AI models.</p>
+            </section>
+
+            <section>
+                <h2>4. Data Storage and Device Security</h2>
+                <p>Your financial ledger is housed entirely within your local iOS Application Sandbox. Custom AI API credentials are protected using Apple's hardware-backed Keychain.</p>
+            </section>
+
+            <section>
+                <h2>5. Data Deletion and Your Rights</h2>
+                <p>You can permanently delete your entire expense ledger at any time via <em>Profile &gt; Clear All Data &amp; Cache</em>. Deleting the application removes all locally stored data immediately.</p>
+            </section>
+
+            <section>
+                <h2>6. Contact Us</h2>
+                <p>For questions or requests regarding your privacy rights:</p>
+                <p><strong>Email:</strong> support@artokulo.com</p>
+            </section>
+        </div>
+
+        <!-- ================= INDONESIAN CONTENT ================= -->
+        <div class="lang-content" id="content-id">
+            <header>
+                <span class="badge">Legal Artokulo</span>
+                <h1>Kebijakan Privasi</h1>
+                <p class="date">Terakhir Diperbarui: 17 Oktober 2026 • Versi 1.0.0</p>
+            </header>
+
+            <div class="summary-card">
+                <strong>Komitmen Privasi:</strong> Artokulo dirancang dengan prinsip privasi utama. Data struk dan pengeluaran Anda disimpan secara lokal di perangkat Anda. Kami tidak pernah menjual data pribadi atau keuangan Anda kepada pihak ketiga atau pengiklan.
+            </div>
+
+            <section>
+                <h2>1. Data yang Dikumpulkan dan Tujuannya</h2>
+                <p>Aplikasi Artokulo hanya memproses data yang diperlukan untuk pengelolaan anggaran dan pengeluaran pribadi:</p>
+                <ul>
+                    <li><strong>Foto Struk Belanja:</strong> Foto yang diambil dengan kamera atau galeri diproses untuk mengekstrak nama toko, tanggal, dan rincian barang.</li>
+                    <li><strong>Catatan Pengeluaran:</strong> Nominal, mata uang, kategori, dan barang yang disimpan di penyimpanan lokal perangkat.</li>
+                    <li><strong>Preferensi Pengguna:</strong> Mata uang pilihan, bahasa, dan batas anggaran bulanan.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>2. Izin Kamera dan Galeri Foto</h2>
+                <p>Akses kamera dan galeri hanya diminta atas persetujuan Anda saat memindai struk. Aplikasi tidak pernah mengambil foto di latar belakang atau mengakses foto lain tanpa izin Anda.</p>
+            </section>
+
+            <section>
+                <h2>3. Pemrosesan Multimodal Vision AI</h2>
+                <p>Aplikasi ini tidak menggunakan OCR lokal. Pemindaian struk dilakukan langsung menggunakan model kecerdasan buatan visual mutakhir (Google Gemini / OpenAI Vision) melalui koneksi terenkripsi HTTPS. Foto hanya dianalisis satu kali untuk menghasilkan data JSON dan tidak digunakan untuk melatih model AI umum.</p>
+            </section>
+
+            <section>
+                <h2>4. Keamanan dan Penyimpanan Data</h2>
+                <p>Semua riwayat pengeluaran Anda disimpan di lingkungan aman perangkat (iOS Sandbox). Kunci API eksternal dilindungi menggunakan enkripsi perangkat keras Apple Keychain.</p>
+            </section>
+
+            <section>
+                <h2>5. Penghapusan Data dan Hak Pengguna</h2>
+                <p>Anda dapat menghapus seluruh riwayat pengeluaran kapan saja melalui menu <em>Profil &gt; Hapus Cache &amp; Data</em>. Menghapus aplikasi dari perangkat akan langsung memusnahkan seluruh data lokal.</p>
+            </section>
+
+            <section>
+                <h2>6. Kontak Kami</h2>
+                <p>Jika ada pertanyaan terkait kebijakan privasi ini:</p>
+                <p><strong>Email:</strong> support@artokulo.com</p>
+            </section>
+        </div>
 
         <footer>
-            &copy; 2026 Artokulo Inc. Tüm hakları saklıdır.
+            &copy; 2026 Artokulo Inc. All rights reserved.
         </footer>
     </div>
+
+    <script>
+        function setLanguage(lang) {
+            var validLangs = ['tr', 'en', 'id'];
+            if (!validLangs.includes(lang)) { lang = 'en'; }
+            
+            document.querySelectorAll('.lang-content').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            document.querySelectorAll('.lang-btn').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            
+            var targetContent = document.getElementById('content-' + lang);
+            var targetBtn = document.getElementById('btn-' + lang);
+            if (targetContent) targetContent.classList.add('active');
+            if (targetBtn) targetBtn.classList.add('active');
+            
+            try {
+                var url = new URL(window.location);
+                url.searchParams.set('lang', lang);
+                window.history.replaceState({}, '', url);
+            } catch(e) {}
+        }
+        
+        // Read URL param or navigator language
+        var params = new URLSearchParams(window.location.search);
+        var initialLang = params.get('lang');
+        if (!initialLang) {
+            var browserLang = (navigator.language || 'en').substring(0, 2).toLowerCase();
+            initialLang = (browserLang === 'tr' || browserLang === 'id') ? browserLang : 'en';
+        }
+        setLanguage(initialLang);
+    </script>
 </body>
 </html>
