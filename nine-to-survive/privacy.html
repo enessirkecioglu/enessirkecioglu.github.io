@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nine to Survive: Office Defense - Privacy Policy / Gizlilik Politikası</title>
+    <style>
+        :root {
+            --bg-color: #0b0f17;
+            --surface-color: #131a26;
+            --surface-card: #1c2536;
+            --primary: #f59e0b;
+            --primary-glow: rgba(245, 158, 11, 0.15);
+            --text-main: #f0f4fc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --accent: #38bdf8;
+        }
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: #f8fafc;
+                --surface-color: #ffffff;
+                --surface-card: #f1f5f9;
+                --primary: #d97706;
+                --primary-glow: rgba(217, 119, 6, 0.12);
+                --text-main: #0f172a;
+                --text-muted: #64748b;
+                --border-color: rgba(0, 0, 0, 0.08);
+                --accent: #0284c7;
+            }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 24px 16px;
+        }
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .lang-switcher {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+            background: var(--surface-color);
+            padding: 6px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            width: fit-content;
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .lang-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+        }
+        header {
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .badge {
+            display: inline-block;
+            background: var(--primary-glow);
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border-color);
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .date {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        .summary-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--primary);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+        section {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+        h2 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+        ul {
+            padding-left: 20px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+        .lang-content {
+            display: none;
+        }
+        .lang-content.active {
+            display: block;
+        }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switcher">
+            <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">English</button>
+            <button class="lang-btn" id="btn-tr" onclick="setLanguage('tr')">Türkçe</button>
+        </div>
+
+        <!-- ENGLISH CONTENT -->
+        <div id="content-en" class="lang-content">
+            <header>
+                <div class="badge">Official Policy</div>
+                <h1>Privacy Policy</h1>
+                <p class="date">Nine to Survive: Office Defense &bull; Last updated: November 2026</p>
+            </header>
+
+            <div class="summary-card">
+                <strong>Summary:</strong> "Nine to Survive: Office Defense" is an offline-friendly casual game that respects your privacy. We do not collect, store, or sell any Personally Identifiable Information (PII) such as your name, email, phone number, contacts, or precise physical location.
+            </div>
+
+            <section>
+                <h2>1. Information We Do NOT Collect</h2>
+                <p>We do not collect any personal data. Specifically:</p>
+                <ul>
+                    <li>No names, usernames, or contact information.</li>
+                    <li>No precise location (GPS) tracking.</li>
+                    <li>No device identifiers used for personal profiling or cross-app advertising.</li>
+                    <li>No access to camera, microphone, contacts, or photo library.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>2. Data Stored Locally on Your Device</h2>
+                <p>All your progress, unlocked characters, upgrades, high scores, settings, and daily task achievements are stored exclusively locally on your device in secure local application storage. If you uninstall the app or clear the app storage via device settings, this locally saved data will be deleted.</p>
+            </section>
+
+            <section>
+                <h2>3. Analytics and Telemetry</h2>
+                <p>To help us balance levels and fix gameplay bugs, the game includes an anonymous gameplay metric system that is disabled by default:</p>
+                <ul>
+                    <li><strong>No PII:</strong> If enabled, only random anonymous gameplay events (such as waves completed, units placed, or boss defeated) with a random UUID are logged.</li>
+                    <li><strong>Opt-In & Control:</strong> You have full control in the Settings menu to toggle telemetry or reset your anonymous analytics identifier at any time.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Advertising and Third-Party SDKs</h2>
+                <p>The game does not integrate third-party targeted advertising SDKs (such as AdMob, Meta Audience Network, etc.). We do not sell or share your data with data brokers or marketing agencies.</p>
+            </section>
+
+            <section>
+                <h2>5. Children's Privacy</h2>
+                <p>Our game is designed for all audiences and does not knowingly collect any personal information from children under the age of 13 (or under the applicable age of digital consent in your region).</p>
+            </section>
+
+            <section>
+                <h2>6. Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated revision date.</p>
+            </section>
+
+            <section>
+                <h2>7. Contact Us</h2>
+                <p>If you have any questions or feedback regarding this Privacy Policy, please contact:</p>
+                <p><strong>Enes Sirkecioğlu</strong><br>Email: <a href="mailto:enes.sirkecioglu1@gmail.com">enes.sirkecioglu1@gmail.com</a></p>
+            </section>
+        </div>
+
+        <!-- TURKISH CONTENT -->
+        <div id="content-tr" class="lang-content">
+            <header>
+                <div class="badge">Resmi Politika</div>
+                <h1>Gizlilik Politikası</h1>
+                <p class="date">Nine to Survive: Office Defense &bull; Son güncelleme: Kasım 2026</p>
+            </header>
+
+            <div class="summary-card">
+                <strong>Özet:</strong> "Nine to Survive: Office Defense", kullanıcı gizliliğine azami önem veren çevrimdışı öncelikli bir oyundur. Adınız, e-posta adresiniz, telefon numaranız, rehberiniz veya konumunuz gibi hiçbir Kişisel Olarak Tanımlanabilir Bilgiyi (PII) toplamıyor, saklamıyor ve satmıyoruz.
+            </div>
+
+            <section>
+                <h2>1. Toplamadığımız Veriler</h2>
+                <p>Oyunumuz hiçbir kişisel veri toplamaz. Özel olarak:</p>
+                <ul>
+                    <li>İsim, kullanıcı adı veya iletişim bilgisi toplanmaz.</li>
+                    <li>Hassas coğrafi konum (GPS) takibi yapılmaz.</li>
+                    <li>Kişisel profil çıkarma veya uygulamalar arası reklam takibi için cihaz kimliği kullanılmaz.</li>
+                    <li>Kamera, mikrofon, rehber veya fotoğraf galerisine erişim talep edilmez.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>2. Cihazınızda Yerel Olarak Saklanan Veriler</h2>
+                <p>Oyun ilerlemeniz, açılan savunmacılar, terfiler, en yüksek skorlar, ayarlar ve günlük görev başarımları yalnızca cihazınızın güvenli yerel depolama alanında saklanır. Uygulamayı cihazınızdan sildiğinizde veya verilerini temizlediğinizde bu yerel kayıtlar silinir.</p>
+            </section>
+
+            <section>
+                <h2>3. Analitik ve Oyun İçi İstatistikler</h2>
+                <p>Oyun dengesini geliştirmek ve hataları tespit etmek amacıyla oyun içinde tamamen anonimleştirilmiş bir telemetri altyapısı bulunmaktadır (varsayılan olarak devre dışıdır):</p>
+                <ul>
+                    <li><strong>Kişisel Bilgi İçermez:</strong> Yalnızca tamamlanan seviye, yerleştirilen birim gibi oyun içi olaylar rastgele bir kimlik (UUID) ile eşleştirilir.</li>
+                    <li><strong>Kullanıcı Kontrolü:</strong> Ayarlar menüsünden telemetriyi dilediğiniz zaman açıp kapatabilir veya anonim kimliğinizi tek dokunuşla sıfırlayabilirsiniz.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Reklamlar ve Üçüncü Taraf SDK'lar</h2>
+                <p>Oyunumuz üçüncü taraf hedefli reklam ağları (AdMob, Meta Audience Network vb.) içermez. Verileriniz hiçbir veri simsarı, reklam ağı veya üçüncü tarafla paylaşılmaz veya satılmaz.</p>
+            </section>
+
+            <section>
+                <h2>5. Çocukların Gizliliği</h2>
+                <p>Oyunumuz genel kitleye hitap eder ve 13 yaşın (veya bulunduğunuz ülkedeki yasal sınırın) altındaki çocuklardan bilerek hiçbir kişisel bilgi toplamaz.</p>
+            </section>
+
+            <section>
+                <h2>6. Politika Güncellemeleri</h2>
+                <p>Bu gizlilik politikası zaman zaman güncellenebilir. Herhangi bir değişiklik olduğunda güncel sürüm bu sayfada yayınlanacaktır.</p>
+            </section>
+
+            <section>
+                <h2>7. İletişim</h2>
+                <p>Gizlilik politikamızla ilgili herhangi bir sorunuz veya geri bildiriminiz olursa bizimle iletişime geçebilirsiniz:</p>
+                <p><strong>Enes Sirkecioğlu</strong><br>E-posta: <a href="mailto:enes.sirkecioglu1@gmail.com">enes.sirkecioglu1@gmail.com</a></p>
+            </section>
+        </div>
+
+        <footer>
+            &copy; 2026 Enes Sirkecioğlu. All rights reserved.
+        </footer>
+    </div>
+
+    <script>
+        function setLanguage(lang) {
+            var validLangs = ['tr', 'en'];
+            if (!validLangs.includes(lang)) { lang = 'en'; }
+            
+            document.querySelectorAll('.lang-content').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            document.querySelectorAll('.lang-btn').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            
+            var targetContent = document.getElementById('content-' + lang);
+            var targetBtn = document.getElementById('btn-' + lang);
+            if (targetContent) targetContent.classList.add('active');
+            if (targetBtn) targetBtn.classList.add('active');
+            
+            try {
+                var url = new URL(window.location);
+                url.searchParams.set('lang', lang);
+                window.history.replaceState({}, '', url);
+            } catch(e) {}
+        }
+        
+        var params = new URLSearchParams(window.location.search);
+        var initialLang = params.get('lang');
+        if (!initialLang) {
+            var browserLang = (navigator.language || 'en').substring(0, 2).toLowerCase();
+            initialLang = (browserLang === 'tr') ? 'tr' : 'en';
+        }
+        setLanguage(initialLang);
+    </script>
+</body>
+</html>
