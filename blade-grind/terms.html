@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blade Grind: Offline RPG - Terms of Service / Kullanım Koşulları</title>
+    <style>
+        :root {
+            --bg-color: #0b0f17;
+            --surface-color: #131a26;
+            --surface-card: #1c2536;
+            --primary: #f59e0b;
+            --primary-glow: rgba(245, 158, 11, 0.15);
+            --text-main: #f0f4fc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --accent: #38bdf8;
+        }
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: #f8fafc;
+                --surface-color: #ffffff;
+                --surface-card: #f1f5f9;
+                --primary: #d97706;
+                --primary-glow: rgba(217, 119, 6, 0.12);
+                --text-main: #0f172a;
+                --text-muted: #64748b;
+                --border-color: rgba(0, 0, 0, 0.08);
+                --accent: #0284c7;
+            }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 24px 16px;
+        }
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .nav-links {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary);
+        }
+        .lang-switcher {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+            background: var(--surface-color);
+            padding: 6px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            width: fit-content;
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .lang-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+        }
+        header {
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .badge {
+            display: inline-block;
+            background: var(--primary-glow);
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border-color);
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .date {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        .summary-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--primary);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+        section {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+        h2 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+        ul {
+            padding-left: 20px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+        .lang-content {
+            display: none;
+        }
+        .lang-content.active {
+            display: block;
+        }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-links">
+            <a href="index.html">← Hub</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html" class="active">Terms of Service</a>
+        </div>
+
+        <div class="lang-switcher">
+            <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">English</button>
+            <button class="lang-btn" id="btn-tr" onclick="setLanguage('tr')">Türkçe</button>
+        </div>
+
+        <!-- ENGLISH CONTENT -->
+        <div id="content-en" class="lang-content">
+            <header>
+                <span class="badge">Terms of Service</span>
+                <h1>Blade Grind: Offline RPG</h1>
+                <p class="date">Last Updated: November 10, 2026</p>
+            </header>
+
+            <div class="summary-card">
+                <strong>Notice:</strong> By downloading, installing, or playing "Blade Grind: Offline RPG", you agree to be bound by these Terms of Service. If you do not agree, please do not install or play the game.
+            </div>
+
+            <section>
+                <h2>1. License Grant</h2>
+                <p>The developer grants you a personal, non-exclusive, non-transferable, revocable license to download, install, and play "Blade Grind: Offline RPG" strictly for personal, non-commercial entertainment purposes on supported Android devices.</p>
+            </section>
+
+            <section>
+                <h2>2. Intellectual Property Rights</h2>
+                <p>All title, ownership rights, and intellectual property rights in and to the game—including but not limited to 3D character and world models, textures, animations, user interface graphics, sound effects, musical compositions, quest designs, source code, and game balancing formulas—belong exclusively to <strong>Enes Sirkecioğlu</strong>.</p>
+                <p>You may not reverse engineer, decompile, modify, distribute, sell, or create derivative works based upon the game without prior written permission.</p>
+            </section>
+
+            <section>
+                <h2>3. Offline Nature & Local Save Data</h2>
+                <p>Blade Grind operates completely offline. Game save data is maintained exclusively on the local storage of your device.</p>
+                <ul>
+                    <li>The developer does not operate cloud backup servers for your save files.</li>
+                    <li>Uninstalling the game, resetting your operating system, or clearing application storage will permanently erase your local character progress, inventory, and unlocked achievements.</li>
+                    <li>The developer cannot restore deleted or corrupted save files resulting from hardware malfunctions, app deletion, or device reset.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Virtual In-Game Currencies & Items</h2>
+                <p>Any virtual currency (Gold, Diamonds) and equipment items (Swords, Armors, Runes) earned or upgraded within the game are virtual game elements with zero real-world economic value.</p>
+                <ul>
+                    <li>Virtual currencies and items cannot be redeemed, sold, or transferred for real money or tangible goods.</li>
+                    <li>The game contains no real-money in-app purchases (IAP) or paid loot boxes.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. Disclaimer of Warranties</h2>
+                <p>"Blade Grind: Offline RPG" is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis without warranties of any kind, whether express, statutory, or implied, including warranties of merchantability, fitness for a particular purpose, or uninterrupted gameplay.</p>
+            </section>
+
+            <section>
+                <h2>6. Limitation of Liability</h2>
+                <p>To the maximum extent permitted by applicable law, in no event shall the developer be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your access to, use of, or inability to use the game.</p>
+            </section>
+
+            <section>
+                <h2>7. Changes to Terms</h2>
+                <p>We reserve the right to revise or modify these Terms at any time. Changes will be posted to this page with an updated revision date. Continued play following changes signifies your acceptance of the revised Terms.</p>
+            </section>
+
+            <section>
+                <h2>8. Contact Information</h2>
+                <p>For questions regarding these Terms of Service, please reach out to:</p>
+                <p><strong>Enes Sirkecioğlu</strong><br>
+                Email: <a href="mailto:enes.sirkecioglu1@gmail.com">enes.sirkecioglu1@gmail.com</a></p>
+            </section>
+        </div>
+
+        <!-- TURKISH CONTENT -->
+        <div id="content-tr" class="lang-content">
+            <header>
+                <span class="badge">Kullanım Koşulları</span>
+                <h1>Blade Grind: Offline RPG</h1>
+                <p class="date">Son Güncelleme: 10 Kasım 2026</p>
+            </header>
+
+            <div class="summary-card">
+                <strong>Bildirim:</strong> "Blade Grind: Offline RPG" oyununu indirerek, yükleyerek veya oynayarak bu Kullanım Koşulları'nı kabul etmiş sayılırsınız. Şartları kabul etmiyorsanız lütfen oyunu yüklemeyiniz ve oynamayınız.
+            </div>
+
+            <section>
+                <h2>1. Lisans Hakkı</h2>
+                <p>Geliştirici, oyunu yalnızca kişisel, ticari olmayan eğlence amacıyla uyumlu Android cihazlarda çalıştırmanız için size münhasır olmayan, devredilemez ve geri alınabilir sınırlı bir kullanım lisansı verir.</p>
+            </section>
+
+            <section>
+                <h2>2. Fikri Mülkiyet Hakları</h2>
+                <p>Oyunun tüm mülkiyeti ve fikri hakları (3B modeller, dokular, ses efektleri, müzikler, kullanıcı arayüzü tasarımları, görev akışları ve yazılım kaynak kodu) <strong>Enes Sirkecioğlu</strong>'na aittir.</p>
+                <p>Oyun kodlarının tersine mühendislikle çözülmesi, izinsiz dağıtılması, satılması veya türev eserler üretilmesi yasaktır.</p>
+            </section>
+
+            <section>
+                <h2>3. Çevrimdışı Çalışma ve Yerel Kayıt Dosyaları</h2>
+                <p>Blade Grind tamamen çevrimdışı çalışan bir oyundur. İlerlemeniz yalnızca cihazınızın kendi yerel belleğinde saklanır:</p>
+                <ul>
+                    <li>Geliştirici harici bir bulut kayıt sunucusu barındırmamaktadır.</li>
+                    <li>Uygulamayı silmeniz veya cihaz verilerini temizlemeniz durumunda kayıtlı karakter verileriniz ve eşyalarınız kalıcı olarak silinir.</li>
+                    <li>Cihaz arızası, işletim sistemi sıfırlama veya silme nedeniyle kaybolan kayıt dosyalarının geliştirici tarafından geri getirilmesi teknik olarak mümkün değildir.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Oyun İçi Sanal Para ve Eşyalar</h2>
+                <p>Oyun içinde kazanılan altın, elmas, kılıç, zırh veya yükseltmeler yalnızca oyun içi eğlence amaçlı sanal öğelerdir.</p>
+                <ul>
+                    <li>Bu sanal öğelerin hiçbir gerçek ekonomik veya nakit değeri yoktur; satılamaz veya devredilemez.</li>
+                    <li>Oyunda gerçek para ile satış (IAP / oyun içi satın alma) bulunmamaktadır.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. Sorumluluk Reddi</h2>
+                <p>Oyun "OLDUĞU GİBİ" (AS IS) esasıyla sunulmaktadır. Geliştirici, oyunun tüm cihazlarda kesintisiz veya tamamen hatasız çalışacağına dair zımni veya sarih bir garanti vermez.</p>
+            </section>
+
+            <section>
+                <h2>6. Sorumluluğun Sınırlandırılması</h2>
+                <p>Yürürlükteki mevzuatın izin verdiği azami ölçüde geliştirici, oyunun kullanımından kaynaklanan dolaylı, arızi veya netice kabilinden doğan zararlardan sorumlu tutulamaz.</p>
+            </section>
+
+            <section>
+                <h2>7. Koşullarda Değişiklik</h2>
+                <p>Geliştirici bu koşulları dilediği zaman güncelleme hakkını saklı tutar. Güncellemeler bu bağlantı altında yayınlandığı andan itibaren yürürlüğe girer.</p>
+            </section>
+
+            <section>
+                <h2>8. İletişim</h2>
+                <p>Kullanım koşullarıyla ilgili sorularınız için iletişime geçebilirsiniz:</p>
+                <p><strong>Enes Sirkecioğlu</strong><br>
+                E-posta: <a href="mailto:enes.sirkecioglu1@gmail.com">enes.sirkecioglu1@gmail.com</a></p>
+            </section>
+        </div>
+
+        <footer>
+            &copy; 2026 Enes Sirkecioğlu. All rights reserved.
+        </footer>
+    </div>
+
+    <script>
+        function setLanguage(lang) {
+            var validLangs = ['tr', 'en'];
+            if (!validLangs.includes(lang)) { lang = 'en'; }
+            
+            document.querySelectorAll('.lang-content').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            document.querySelectorAll('.lang-btn').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            
+            var targetContent = document.getElementById('content-' + lang);
+            var targetBtn = document.getElementById('btn-' + lang);
+            if (targetContent) targetContent.classList.add('active');
+            if (targetBtn) targetBtn.classList.add('active');
+            
+            try {
+                var url = new URL(window.location);
+                url.searchParams.set('lang', lang);
+                window.history.replaceState({}, '', url);
+            } catch(e) {}
+        }
+        
+        var params = new URLSearchParams(window.location.search);
+        var initialLang = params.get('lang');
+        if (!initialLang) {
+            var browserLang = (navigator.language || 'en').substring(0, 2).toLowerCase();
+            initialLang = (browserLang === 'tr') ? 'tr' : 'en';
+        }
+        setLanguage(initialLang);
+    </script>
+</body>
+</html>

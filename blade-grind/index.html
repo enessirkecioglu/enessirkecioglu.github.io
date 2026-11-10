@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blade Grind: Offline RPG - Official Legal & Support Hub</title>
+    <style>
+        :root {
+            --bg-color: #0b0f17;
+            --surface-color: #131a26;
+            --surface-card: #1c2536;
+            --primary: #f59e0b;
+            --primary-glow: rgba(245, 158, 11, 0.15);
+            --text-main: #f0f4fc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --accent: #38bdf8;
+        }
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: #f8fafc;
+                --surface-color: #ffffff;
+                --surface-card: #f1f5f9;
+                --primary: #d97706;
+                --primary-glow: rgba(217, 119, 6, 0.12);
+                --text-main: #0f172a;
+                --text-muted: #64748b;
+                --border-color: rgba(0, 0, 0, 0.08);
+                --accent: #0284c7;
+            }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 32px 16px;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 36px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .badge {
+            display: inline-block;
+            background: var(--primary-glow);
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 14px;
+            border-radius: 999px;
+            margin-bottom: 16px;
+            border: 1px solid var(--border-color);
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            font-size: 15px;
+            color: var(--text-muted);
+            max-width: 520px;
+            margin: 0 auto;
+        }
+        .cards-grid {
+            display: grid;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 22px 24px;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
+            background: var(--surface-card);
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .card-arrow {
+            font-size: 18px;
+            color: var(--text-muted);
+        }
+        .card-desc {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            line-height: 1.55;
+        }
+        .support-box {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 22px 24px;
+            text-align: center;
+        }
+        .support-box h2 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .support-box p {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+        }
+        .btn-contact {
+            display: inline-block;
+            background: var(--primary);
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 13.5px;
+            padding: 10px 22px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .btn-contact:hover {
+            opacity: 0.9;
+        }
+        footer {
+            margin-top: 48px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <span class="badge">Offline Action RPG</span>
+            <h1>Blade Grind</h1>
+            <p class="tagline">Classic hack &amp; slash progression, responsive combat, offline exploration, and anvil blacksmith upgrading.</p>
+        </div>
+
+        <div class="cards-grid">
+            <a href="privacy.html" class="card">
+                <div class="card-header">
+                    <span class="card-title">🔒 Privacy Policy / Gizlilik Politikası</span>
+                    <span class="card-arrow">→</span>
+                </div>
+                <p class="card-desc">Review our zero-data collection policy. Learn how your game progress stays entirely offline on your device without tracking, ads, or account requirements.</p>
+            </a>
+
+            <a href="terms.html" class="card">
+                <div class="card-header">
+                    <span class="card-title">📜 Terms of Service / Kullanım Koşulları</span>
+                    <span class="card-arrow">→</span>
+                </div>
+                <p class="card-desc">Read the terms and conditions regarding offline gameplay, intellectual property, local save files, and in-game virtual currencies.</p>
+            </a>
+        </div>
+
+        <div class="support-box">
+            <h2>Player Support &amp; Feedback</h2>
+            <p>Encountered a bug or have ideas to improve Blade Grind? Reach out directly:</p>
+            <a href="mailto:enes.sirkecioglu1@gmail.com" class="btn-contact">Contact Developer</a>
+        </div>
+
+        <footer>
+            &copy; 2026 Enes Sirkecioğlu. All rights reserved.<br>
+            <span style="font-size: 11px; opacity: 0.75;">Blade Grind: Offline RPG &bull; com.eslab.bladegrind</span>
+        </footer>
+    </div>
+</body>
+</html>

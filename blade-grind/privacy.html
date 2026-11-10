@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blade Grind: Offline RPG - Privacy Policy / Gizlilik Politikası</title>
+    <style>
+        :root {
+            --bg-color: #0b0f17;
+            --surface-color: #131a26;
+            --surface-card: #1c2536;
+            --primary: #f59e0b;
+            --primary-glow: rgba(245, 158, 11, 0.15);
+            --text-main: #f0f4fc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --accent: #38bdf8;
+        }
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: #f8fafc;
+                --surface-color: #ffffff;
+                --surface-card: #f1f5f9;
+                --primary: #d97706;
+                --primary-glow: rgba(217, 119, 6, 0.12);
+                --text-main: #0f172a;
+                --text-muted: #64748b;
+                --border-color: rgba(0, 0, 0, 0.08);
+                --accent: #0284c7;
+            }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 24px 16px;
+        }
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .nav-links {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary);
+        }
+        .lang-switcher {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+            background: var(--surface-color);
+            padding: 6px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            width: fit-content;
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .lang-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+        }
+        header {
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .badge {
+            display: inline-block;
+            background: var(--primary-glow);
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border-color);
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .date {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        .summary-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--primary);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+        section {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+        h2 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+        ul {
+            padding-left: 20px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+        .lang-content {
+            display: none;
+        }
+        .lang-content.active {
+            display: block;
+        }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-links">
+            <a href="index.html">← Hub</a>
+            <a href="privacy.html" class="active">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </div>
+
+        <div class="lang-switcher">
+            <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">English</button>
+            <button class="lang-btn" id="btn-tr" onclick="setLanguage('tr')">Türkçe</button>
+        </div>
+
+        <!-- ENGLISH CONTENT -->
+        <div id="content-en" class="lang-content">
+            <header>
+                <span class="badge">Privacy Policy</span>
+                <h1>Blade Grind: Offline RPG</h1>
+                <p class="date">Last Updated: November 10, 2026</p>
+            </header>
+
+            <div class="summary-card">
+                <strong>Summary:</strong> "Blade Grind: Offline RPG" is an offline-first single-player action RPG that respects your privacy. We do not collect, store, transmit, or sell any Personally Identifiable Information (PII) such as your name, email, phone number, location, or contacts.
+            </div>
+
+            <section>
+                <h2>1. Information We Do Not Collect</h2>
+                <p>Blade Grind is engineered to function entirely offline without requiring user registration, accounts, or cloud connectivity. We do NOT collect:</p>
+                <ul>
+                    <li>Personal information (names, emails, addresses, phone numbers).</li>
+                    <li>Geographic or GPS location data.</li>
+                    <li>Identifiers for cross-app tracking or advertising profiles.</li>
+                    <li>Device contacts, photos, media, camera, or microphone access.</li>
+                    <li>Financial or banking details (the game contains no real-money transactions).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>2. Data Stored Locally on Your Device</h2>
+                <p>All game data—including player levels, experience points, equipped swords and armors, blacksmith upgrade levels, inventory items, unlocked maps, quest progression, and game audio preferences—is stored strictly locally in your device's isolated app storage sandbox (e.g. <code>user://save_game.json</code>).</p>
+                <p>This data never leaves your device. If you uninstall the application or clear app data via device settings, all locally stored progress will be deleted.</p>
+            </section>
+
+            <section>
+                <h2>3. Device Permissions Used</h2>
+                <p>The application only requests the standard Android <code>VIBRATE</code> permission:</p>
+                <ul>
+                    <li><strong>Vibration (Haptics):</strong> Used exclusively to deliver subtle tactile feedback during combat actions, taking damage, and level up moments. It does not access private data and can be controlled via your device vibration settings.</li>
+                </ul>
+                <p>The game requires <strong>no internet access</strong> (<code>android.permission.INTERNET</code> is not requested), preventing any outbound network transmission.</p>
+            </section>
+
+            <section>
+                <h2>4. Third-Party Services and SDKs</h2>
+                <p>The game contains zero third-party tracking, analytics, or behavioral advertising SDKs (such as Google AdMob, Unity Ads, Facebook Audience Network, or Firebase Analytics). Your gameplay is completely private and untracked.</p>
+            </section>
+
+            <section>
+                <h2>5. Children’s Privacy</h2>
+                <p>Blade Grind: Offline RPG is designed for a general audience and complies with the Children's Online Privacy Protection Act (COPPA) and applicable international privacy laws. Because we do not collect any personal data whatsoever, we do not knowingly collect personal information from children under the age of 13 (or under 16 where applicable).</p>
+            </section>
+
+            <section>
+                <h2>6. Security</h2>
+                <p>Because no player data is transmitted over the internet or stored on external servers, the risk of data breaches, server compromises, or unauthorized data exposure is eliminated.</p>
+            </section>
+
+            <section>
+                <h2>7. Changes to This Privacy Policy</h2>
+                <p>We may periodically update this Privacy Policy to reflect future game enhancements. Any revisions will be published at this permanent URL with an updated "Last Updated" date.</p>
+            </section>
+
+            <section>
+                <h2>8. Contact Information</h2>
+                <p>If you have any questions, suggestions, or concerns regarding this Privacy Policy, please contact the developer:</p>
+                <p><strong>Enes Sirkecioğlu</strong><br>
+                Developer / Creator of Blade Grind: Offline RPG<br>
+                Email: <a href="mailto:enes.sirkecioglu1@gmail.com">enes.sirkecioglu1@gmail.com</a></p>
+            </section>
+        </div>
+
+        <!-- TURKISH CONTENT -->
+        <div id="content-tr" class="lang-content">
+            <header>
+                <span class="badge">Gizlilik Politikası</span>
+                <h1>Blade Grind: Offline RPG</h1>
+                <p class="date">Son Güncelleme: 10 Kasım 2026</p>
+            </header>
+
+            <div class="summary-card">
+                <strong>Özet:</strong> "Blade Grind: Offline RPG", kullanıcı gizliliğine tam saygı duyan, çevrimdışı (offline) tek oyunculu bir aksiyon RPG oyunudur. Adınız, e-posta adresiniz, konumunuz, telefon numaranız veya rehberiniz dahil olmak üzere hiçbir Kişisel Olarak Tanımlanabilir Bilgiyi (PII) toplamıyoruz, saklamıyoruz ve üçüncü taraflarla paylaşmıyoruz.
+            </div>
+
+            <section>
+                <h2>1. Toplamadığımız Veriler</h2>
+                <p>Blade Grind, tamamen internet bağlantısı olmadan çalışmak üzere geliştirilmiştir. Oyunumuz:</p>
+                <ul>
+                    <li>İsim, e-posta, telefon veya adres gibi kişisel kimlik bilgilerini toplamaz.</li>
+                    <li>GPS veya yaklaşık konum verisi takip etmez.</li>
+                    <li>Uygulamalar arası takip, kişiselleştirilmiş reklam profillemesi yapmaz.</li>
+                    <li>Kamera, mikrofon, galeri veya rehber erişimi talep etmez.</li>
+                    <li>Finansal veya ödeme bilgisi istemez (oyun içinde gerçek para ile satın alım bulunmaz).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>2. Cihazınızda Yerel Olarak Saklanan Veriler</h2>
+                <p>Karakter seviyeniz, eşyalarınız, demirci yükseltmeleriniz, altın ve elmas miktarı, harita ilerlemeniz ve ses ayarlarınız yalnızca cihazınızın kendi güvenli yerel depolama alanında saklanır.</p>
+                <p>Bu veriler hiçbir şekilde cihazınızın dışına aktarılmaz. Uygulamayı sildiğinizde veya cihaz ayarlarından uygulama verilerini temizlediğinizde bu yerel kayıtlar cihazınızdan silinir.</p>
+            </section>
+
+            <section>
+                <h2>3. Kullanılan Cihaz İzinleri</h2>
+                <p>Uygulama yalnızca standart Android titreşim iznini (<code>VIBRATE</code>) kullanır:</p>
+                <ul>
+                    <li><strong>Titreşim İzni:</strong> Yalnızca savaş anlarında, hasar alındığında ve seviye atlama efektlerinde dokunsal geri bildirim sağlamak amacıyla kullanılır. Hiçbir özel veriye erişemez.</li>
+                </ul>
+                <p>Oyunda internet izni (<code>INTERNET</code>) talep edilmediği için uygulamanın dışarıya herhangi bir veri göndermesi teknik olarak mümkün değildir.</p>
+            </section>
+
+            <section>
+                <h2>4. Üçüncü Taraf SDK'lar ve Reklamlar</h2>
+                <p>Oyunumuz hiçbir üçüncü taraf reklam ağı (AdMob, Unity Ads vb.) veya analitik/takip SDK'sı (Firebase, GameAnalytics vb.) içermez. Oyun deneyiminiz tamamen özel ve bağımsızdır.</p>
+            </section>
+
+            <section>
+                <h2>5. Çocukların Gizliliği</h2>
+                <p>Blade Grind: Offline RPG genel kitleye hitap eder ve çocukların çevrimiçi gizliliğini koruma yasalarına (COPPA vb.) uygundur. Bilerek hiçbir yaş grubundan kişisel bilgi toplanmamaktadır.</p>
+            </section>
+
+            <section>
+                <h2>6. Politika Güncellemeleri</h2>
+                <p>Bu gizlilik politikası gerektiğinde güncellenebilir. Güncellemeler bu web adresi üzerinde tarih belirtilerek yayınlanacaktır.</p>
+            </section>
+
+            <section>
+                <h2>7. İletişim</h2>
+                <p>Gizlilik politikamız veya oyun hakkında her türlü soru ve geri bildiriminiz için doğrudan geliştiriciyle iletişime geçebilirsiniz:</p>
+                <p><strong>Enes Sirkecioğlu</strong><br>
+                Blade Grind Geliştiricisi<br>
+                E-posta: <a href="mailto:enes.sirkecioglu1@gmail.com">enes.sirkecioglu1@gmail.com</a></p>
+            </section>
+        </div>
+
+        <footer>
+            &copy; 2026 Enes Sirkecioğlu. All rights reserved.
+        </footer>
+    </div>
+
+    <script>
+        function setLanguage(lang) {
+            var validLangs = ['tr', 'en'];
+            if (!validLangs.includes(lang)) { lang = 'en'; }
+            
+            document.querySelectorAll('.lang-content').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            document.querySelectorAll('.lang-btn').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            
+            var targetContent = document.getElementById('content-' + lang);
+            var targetBtn = document.getElementById('btn-' + lang);
+            if (targetContent) targetContent.classList.add('active');
+            if (targetBtn) targetBtn.classList.add('active');
+            
+            try {
+                var url = new URL(window.location);
+                url.searchParams.set('lang', lang);
+                window.history.replaceState({}, '', url);
+            } catch(e) {}
+        }
+        
+        var params = new URLSearchParams(window.location.search);
+        var initialLang = params.get('lang');
+        if (!initialLang) {
+            var browserLang = (navigator.language || 'en').substring(0, 2).toLowerCase();
+            initialLang = (browserLang === 'tr') ? 'tr' : 'en';
+        }
+        setLanguage(initialLang);
+    </script>
+</body>
+</html>
